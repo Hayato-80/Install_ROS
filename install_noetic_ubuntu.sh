@@ -6,7 +6,7 @@ sudo apt install -y curl
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 
 sudo apt update
-sudo apt install ros-noetic-desktop-full
+sudo apt install ros-noetic-desktop-full -y
 apt search ros-noetic
 
 cd
@@ -14,9 +14,8 @@ source /opt/ros/noetic/setup.bash
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
-sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential -y
 sudo rosdep init
 rosdep update
 
 source devel/setup.bash
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
